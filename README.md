@@ -1,3 +1,4 @@
+
 # Overview
 This repo is based on the work done by Omar Contreras during his MSc thesis for Peltarion, working on data from Folktandvården Västra Götaland (FTV) during the [SMS project](https://www.ai.se/en/events/pioneering-natural-language-processing-nlp-swedish-healthcare). The goal of the project was to identify based on patient journal notes for dental visits if antibiotics should be perscribed; and if so why using explainable AI methods (XAI). The model should learn to identify in which cases antibiotics were correctly or incorrecly perscribed and help mitigate the number of incorrect antibiotics presriptions    
 
@@ -21,8 +22,13 @@ Requires `jupyter notebook/lab`
 cd notebooks
 jupyter notebook
 ```
-**NOTE**: For GDPR reasons, the actual dataset is not included and will need to be replaced!     
-Paths including `/workspace/data/*` will need to be changed to your data path, ex `../data/<NAME_OF_DATASET.csv>`
+   
+**NOTE**:    
+For GDPR reasons, the actual datasets or trained models are not included.    
+Therefore, replace in the notebooks and script files:   
+- `../models/<MODEL_NAME>`  and
+- `../data/<DATASET.csv>`  
+
 
 # Train your own models
 Recommend you convert the notebook 03_top_models.ipynb to a script or use on of the existing scripts in the [script](./scripts) folder. You will need to change the path to the data to your own data in CSV format and include a Callback for experiment logging and we advise using [Neptune](https://neptune.ai/) or [W&B](https://wandb.ai/site) for experiment logging and tracking, and is added as a [Callbacks](https://huggingface.co/transformers/main_classes/callback.html) argument to the traniner(). For an example of using an experiment logging callback, see [notebooks/03_Top_models.ipynb](./notebooks/03_Top_models.ipynb) -> Training -> callbacks - then insert your own callback.
@@ -42,30 +48,43 @@ The leading numbers in the names indicate the order in which they were ran.
 
 ### Names in the notebook and meaning
 
-##### 00_  
+<details>
+<summary>00_ </summary>
 Cleaning the original dataset (Excel file) and store into csv files.  
 Also a notebook for identifying named entities (NER), some of which were used to clean the dataset further and annonymize the data.   
-
-##### 01_   
+</details>
+  
+<details>
+<summary>01_ </summary>  
 First initial model trained on the uncleaned dataset  
+</details>
 
-##### 02_  
+<details>
+<summary>02_ </summary> 
 Notebooks for training the different [Models](#Models) on the cleaned dataset   
+</details>
 
-##### 03_  
+<details>
+<summary>03_ </summary> 
 Similar to `01` and `02`, but gives an overall best setting for training the models to this problem
+</details>
 
-##### 04_   
+<details>
+<summary>04_ </summary>  
 Explainable AI (XAI) notebooks using either Integrated Gradients (IG) or Kernel SHAP on different datasets:
 
   - IMDB (toy classification dataset for testing)
   - Antibiotics (FTV target dataset)
+</details>
 
-##### x_ 
+
+<details>
+<summary>x_ </summary>
 General and simplified notebooks for showcasing some of the things described in the other notebooks
 
   - Toy example for training a [BERT model](./notebooks/x_train_BERT_imdb.ipynb) 
   - Toy example for explaining a pre-trained model using [Kernel SHAP](./notebooks/x_XAI_Kernel_Shap.ipynb)
+</details>
 
 ## Models
 Models are trained for classifying when antibiotics was correctly prescribed.
