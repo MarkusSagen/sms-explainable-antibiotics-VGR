@@ -1,6 +1,6 @@
 
 # Overview
-This repo is based on the work done by Omar Contreras during his MSc thesis for Peltarion, working on data from Folktandvården Västra Götaland (FTV) during the [SMS project](https://www.ai.se/en/events/pioneering-natural-language-processing-nlp-swedish-healthcare). The goal of the project was to identify based on patient journal notes for dental visits if antibiotics should be perscribed; and if so why using explainable AI methods (XAI). The model should learn to identify in which cases antibiotics were correctly or incorrecly perscribed and help mitigate the number of incorrect antibiotics presriptions    
+This repo is based on the work done by Omar Contreras for his MSc thesis for Peltarion, working on data from Folktandvården Västra Götaland (FTV) during the [SMS project](https://www.ai.se/en/events/pioneering-natural-language-processing-nlp-swedish-healthcare). The goal of the project was to identify based on patient journal notes for dental visits if antibiotics should be perscribed; and if so why using explainable AI methods (XAI). The model should learn to identify in which cases antibiotics were correctly or incorrecly perscribed and help mitigate the number of incorrect antibiotics presriptions    
 
 For those interested, Omar's thesis can be found [here](https://www.diva-portal.org/smash/get/diva2:1605539/FULLTEXT01.pdf)  
 
