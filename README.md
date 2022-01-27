@@ -6,8 +6,8 @@ For those interested, Omar's thesis can be found [here](https://www.diva-portal.
 
 # Setup   
 ```shell
-git clone git@github.com:Peltarion/ai_explainable_antibiotics_omars_thesis.git
-cd ai_explainable_antibiotics_omars_thesis
+git clone git@github.com:Peltarion/sms-explainable-antibiotics-VGR.git
+cd sms-explainable-antibiotics-VGR
 ```
 ```shell
 # Activate the virtual environment of your choise
